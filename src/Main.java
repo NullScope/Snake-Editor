@@ -53,10 +53,10 @@ public class Main extends JFrame{
 	private static ImageIcon enemyDOWNICO =  new ImageIcon("enemyDOWN.png");
 	private static ImageIcon enemyUPICO =  new ImageIcon("enemyUP.png");
 	
-	private static Direction up = new Direction("CIMA", '^');
-	private static Direction down = new Direction("BAIXO", '/');
-	private static Direction left = new Direction("ESQUERDA", '<');
-	private static Direction right = new Direction("DIREITA", '>');
+	private static Direction up = new Direction("UP", '^');
+	private static Direction down = new Direction("DOWN", '/');
+	private static Direction left = new Direction("LEFT", '<');
+	private static Direction right = new Direction("RIGHT", '>');
 	
 	private static Direction dir_chose = left;
 	private static Direction enemy_chose = left;
@@ -72,26 +72,26 @@ public class Main extends JFrame{
 	private static JPanel panel3 = new JPanel();
 	private static JPanel panel4 = new JPanel();
 	
-	private static JLabel label1 = new JLabel("DIREÇÃO DO JOGADOR");
+	private static JLabel label1 = new JLabel("PLAYER DIRECTION");
 	private static JLabel label2 = new JLabel("POINTS");
 	private static JLabel label3 = new JLabel(" ");
-	private static JLabel label4 = new JLabel("DIREÇÃO DO INIMIGO");
+	private static JLabel label4 = new JLabel("ENEMY DIRECTION");
 	
 	private static JTextArea areaPoints = new JTextArea();
-	private static JButton grassBTN = new JButton("Relva                         ", grassICO);
-	private static JButton vinesBTN = new JButton("Paredes                    ",vinesICO);
-	private static JButton macaBTN = new JButton("Maçã                          ", macaICO);
-	private static JButton limaoBTN = new JButton("Limão                         ",limaoICO);
-	private static JButton melanBTN = new JButton("Melancia                   ",melanICO);
-	private static JButton bodyBTN = new JButton("Corpo do Jogador   ",bodyLEFTICO);
-	private static JButton headBTN = new JButton("Cabeça do Jogador",headICO);
-	private static JButton tailBTN = new JButton("Cauda do Jogador  ",tailICO);
-	private static JButton enemyBodyBTN = new JButton("Corpo do Inimigo     ", enemyLEFTICO);
-	private static JButton enemyHeadBTN = new JButton("Cabeça do Inimigo  ", enemyHeadICO);
-	private static JButton enemyTailBTN = new JButton("Cauda do Inimigo    ", enemyTailICO);
+	private static JButton grassBTN = new JButton("Grass                             ", grassICO);
+	private static JButton vinesBTN = new JButton("Walls                             ",vinesICO);
+	private static JButton macaBTN = new JButton("Apple                             ", macaICO);
+	private static JButton limaoBTN = new JButton("Lemon                          ",limaoICO);
+	private static JButton melanBTN = new JButton("Watermelon                ",melanICO);
+	private static JButton bodyBTN = new JButton("Player Body                  ",bodyLEFTICO);
+	private static JButton headBTN = new JButton("Player Head                  ",headICO);
+	private static JButton tailBTN = new JButton("Player Tail                    ",tailICO);
+	private static JButton enemyBodyBTN = new JButton("Enemy Body                ", enemyLEFTICO);
+	private static JButton enemyHeadBTN = new JButton("Enemy Head                ", enemyHeadICO);
+	private static JButton enemyTailBTN = new JButton("Enemy Tail                  ", enemyTailICO);
 	private static JButton reset = new JButton("Reset");
-	private static JButton save = new JButton("Guardar");
-	private static JButton load = new JButton("Carregar");
+	private static JButton save = new JButton("Save");
+	private static JButton load = new JButton("Load");
 	
 	private static final int largura = 40;
 	private static final int altura = 40;
@@ -107,7 +107,7 @@ public class Main extends JFrame{
 	private static int j = -1;
 	private static int k = -1;
 	
-	private static Object[] options = {"Sim","Não"};
+	private static Object[] options = {"Yes","No"};
 	
 	private static Timer clock;
 	
@@ -115,7 +115,7 @@ public class Main extends JFrame{
 	
 	public Main(){
 		super("Snake Editor v0.99");
-		setSize(829,664);
+		setSize(841,664);
 		setVisible(true);
 		panel.setBounds(0, 0, largura*escala, altura*escala);
 		panel.setSize(largura, altura);
